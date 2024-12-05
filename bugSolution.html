@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const myDiv = document.getElementById("myDiv");
+      if (myDiv) {
+        if (myDiv.hasOwnProperty("textContent")) {
+          myDiv.textContent = "Hello! Element exists and property is accessible!";
+        } else {
+          console.error("Property does not exist on this element");
+        }
+      } else {
+        console.error("Element with ID 'myDiv' not found");
+      }
+    });
+  </script>
+</body>
+</html>
