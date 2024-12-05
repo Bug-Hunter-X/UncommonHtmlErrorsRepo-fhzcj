@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    //Attempting to access a property of an element that doesn't exist.  This could happen due to a typo,
+    //or because the element might not be fully loaded when the script runs. 
+    //This will cause a TypeError in modern browsers.
+    myDiv.nonExistentProperty.value = "hello"; 
+  </script>
+</body>
+</html>
